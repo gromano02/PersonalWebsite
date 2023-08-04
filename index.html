@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>W3.CSS Template</title>
+        <title>GiovanniRomano</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,14 +11,15 @@
             body,
             h1,
             h2,
-            h3 {
-                font-family: "Lato", sans-serif;
+            h3,
+            h4 {
+                font-family: 'Courier New', monospace;
             }
 
             body,
             html {
                 height: 100%;
-                color: #777;
+                color: #000;
                 line-height: 1.8;
             }
 
@@ -44,6 +45,12 @@
                 min-height: 150px;
             }
 
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("https://www.w3schools.com/w3images/parallax3.jpg");
+                min-height: 400px;
+            }
+
             .w3-wide {
                 letter-spacing: 10px;
             }
@@ -55,11 +62,13 @@
             /* Slideshow container */
             .slideshow-container {
                 position: relative;
+                height: auto;
                 background: #f1f1f1f1;
             }
             /* Slides */
             .mySlides {
                 display: none;
+                padding: 100px
             }
             /* Next & previous buttons */
             .prev, .next {
@@ -82,7 +91,7 @@
                 border-radius: 3px 0 0 3px;
             }
             /* On hover, add a black background color with a little bit see-through */
-            prev:hover, .next:hover {
+            .prev:hover, .next:hover {
                 background-color: rgba(0,0,0,0.8);
                 color: white;
             }
@@ -123,10 +132,10 @@
         </style>
     </head>
 <body>
-
+    
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-card w3-animate-top w3-white" id="myNavbar">
+        <div class="w3-bar" id="myNavbar">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
                 href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
@@ -135,15 +144,13 @@
             <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
             <a href="#professionalexperience" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROFESSIONAL EXPERIENCE</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            </a>
         </div>
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#professionalexperience" class="w3-bar-item w3-button" onclick="toggleFunction()">PROFESSIONAL EXPERIENCE</a>
             <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
         </div>
     </div>
 
@@ -158,47 +165,73 @@
     <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-padding-64" id="about">
         <h3 class="w3-center">ABOUT ME</h3>
-        <p>Hello! My name is Giovanni Romano, and I am a soon-to-be graduated college student studying Computer Science with a passion for data science. I am currently pursuing my Bachelor of Science in Engineering at the University of Connecticut with an expected graduation date in May 2020. I am actively seeking entry-level opportunities in the data science field and eager to apply my skills, knowledge, and enthusiasm to make meaningful contributions to a dynamic and innovative organization.</p>
+        <p>Hello! My name is Giovanni Romano, and I am a soon-to-be graduated college student studying Computer Science with a passion for data science. I am currently pursuing my Bachelor of Science in Engineering at the University of Connecticut with an expected graduation date in May 2024. I am actively seeking entry-level opportunities in the data science field and eager to apply my skills, knowledge, and enthusiasm to make meaningful contributions to a dynamic and innovative organization.</p>
     </div>
 
 
     <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min" id="professionalexperience">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Professional Experience</span>
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle" style="text-align: center;">
+            <span class="w3-center w3-xxlarge w3-text-white">PROFESSIONAL EXPERIENCE</span>
         </div>
     </div>
 
-    <div class="w3-content w3-container w3-padding-64">
-        <h3 class="w3-center">Data Services Intern</h3>
-        <p class="w3-center"><em>Yale University Health Science and Information Services</em></p><br>
+    <div class="w3-content w3-container w3-padding-64" id="professionalexperience">
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="data:image/png;base64,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" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+            <div class="w3-large w3-margin-bottom">
+                <h3 class="w3-left">Data Services Intern</h3>
+                <p class="w3-left"><em>Yale University Health Science and Information Services</em></p>
+            </div>
+        </div>
+    </div>
+
     <!-- Slideshow container -->
     <div class="slideshow-container">
+
     <!-- Full-width slides/quotes -->
     <div class="mySlides">
-        <h4 class="w3-center">Armature User Acceptance Testing<h4/>
+        <h4 class="w3-center">Data Reporting<h4/>
         <ul>
-            <li>Conducted User Acceptance Testing on a cutting-edge collaborative workflow platform, facilitating Yale School of Medicine's reaccreditation and Quality Improvement requirements.</li>
-            <li>Evaluated export function compatibility with native Word documents and assessed user acceptance and ease of system adoption.</li>
-
+            <li>Utilized Power BI to design and develop interactive and visually compelling data reports for Yale University's space data analysis.</li>
+            <li></li>
         </ul>
     </div>
 
     <div class="mySlides">
-        <h4 class="w3-center">Armature User Acceptance Testing<h4/>
+        <h4 class="w3-center">User Acceptance Testing<h4/>
         <ul>
             <li>Conducted User Acceptance Testing on a cutting-edge collaborative workflow platform, facilitating Yale School of Medicine's reaccreditation and Quality Improvement requirements.</li>
             <li>Evaluated export function compatibility with native Word documents and assessed user acceptance and ease of system adoption.</li>
-
         </ul>
     </div>
 
     <div class="mySlides">
-        <h4 class="w3-center">Armature User Acceptance Testing<h4/>
+        <h4 class="w3-center">Salesforce Data Import<h4/>
         <ul>
-            <li>Conducted User Acceptance Testing on a cutting-edge collaborative workflow platform, facilitating Yale School of Medicine's reaccreditation and Quality Improvement requirements.</li>
-            <li>Evaluated export function compatibility with native Word documents and assessed user acceptance and ease of system adoption.</li>
+            <li>Formatted and cleansed large volumes of data to ensure accuracy, consistency, and compliance with Salesforce data standards, resulting in a seamless data upload process.</li>
+            <li>Developed a comprehensive and user-friendly process document detailing step-by-step instructions for data scrubbing and importing data into Salesforce</li>
+        </ul>
+    </div>
 
+    <div class="mySlides">
+        <h4 class="w3-center">Machine Learning Program Quality Assurance Testing<h4/>
+        <ul>
+            <li>Inputted diverse test forms representative of different scenarios and data variations to evaluate the program's accuracy and effectiveness in analyzing health information.</li>
+            <li>Recorded the confidence scores provided by the machine learning program and identified and documented errors or discrepancies encountered during the testing process, enabling the development team to address and resolve issues promptly.</li>
+        </ul>
+    </div>
+
+    <div class="mySlides">
+        <h4 class="w3-center">Soft Skills<h4/>
+        <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Time Management</li>
+            <li>Presentation Skills</li>
         </ul>
     </div>
 
@@ -212,44 +245,47 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
     </div>
+
     <!-- Container (Contact Section) -->
-    <div class="w3-content w3-container w3-padding-top-48 w3-padding-bottom-30" id="contact">
-        <h3 class="w3-center">Contact</h3>
+    <div class="w3-content w3-container w3-padding-top-64" id="contact">
+        <h3 class="w3-center">CONTACT</h3>
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
                 <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Southbury, CT<br>
                     <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 203-217-7779<br>
                     <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
                     giovanniromano@live.com<br>
-                    <i class="fa fa-linkedin w3-hover-text-black w3-xlarge w3-margin-right"></i>
+                </div>
+                <div class="w3-xlarge w3-section">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-github w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <a href="www.linkedin.com/in/giovanni-romano-3659a71b6" target="_blank">
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    </a>
                 </div>
             </div>
+        </div>
     </div>
 
-    <!-- Footer. -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-48">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <!-- Footer end. -->
     </footer>
 
     <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
 
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function toggleFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-
+        //Carousel functions
         var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -276,6 +312,27 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
+
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
     </script>
 
 </body>
