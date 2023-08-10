@@ -152,7 +152,7 @@
 
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="w3-display-right" style="white-space:nowrap;">
+        <div class="w3-display-left" style="white-space:nowrap;">
             <span class="w3-center w3-padding-large w3-text-white w3-xlarge w3-wide w3-animate-opacity">GIOVANNI <span
                     > ROMANO</span>
         </div>
@@ -334,9 +334,9 @@
         function myFunction() {
             var navbar = document.getElementById("myNavbar");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-text-white";
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
             } else {
-                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "w3-text-white");
             }
         }
 
